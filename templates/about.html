@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About | StudentAI</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    {% include 'navbar.html' %}
+
+    <!-- About Content Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 text-primary">About the Project</h2>
+            <p class="lead text-center text-secondary mb-5">
+                This project aims to leverage the power of Machine Learning to predict student academic performance in Mathematics.
+            </p>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title text-info">🎯Goal & Objective</h5>
+                            <p class="card-text">
+                                To help educators and parents understand factors influencing a student's math performance, and to provide early insights for academic interventions and support.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title text-info">🛠 Tools & Dependencies</h5>
+                            <p class="card-text">
+                                Built using Python, Scikit-learn, Pandas, NumPy, Flask, and Bootstrap 5. The model is trained on real educational data and is designed to generalize to unseen data with the help of MLOps practices.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-5 text-center">
+                <a href="{{ url_for('predict_datapoint') }}" class="btn btn-primary btn-lg" style="background-color: #163459;">Try the Predictor</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-3 mt-5" style="color: #163459; border-color: #163459">
+        &copy; {{ year }} Student Academic Performance | DataChronikles
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
