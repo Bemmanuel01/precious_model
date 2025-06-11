@@ -8,12 +8,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
+<body style="padding-top: 70px; background-color: #9ACEEB;">
 
    {% include 'navbar.html' %}
     <!-- Welcome Content Section -->
-    <section class="py-5 bg-light">
-        <div class="container text-center">
+    <section class="py-5">
+        <div class="container text-center" style="margin-top: 100px;">
             <div class="card shadow p-5 mx-auto" style="max-width: 720px;">
                 <h1 class="display-5 fw-bold text-primary">👋 You're Welcome</h1>
                 <p class="lead text-secondary mt-3">
@@ -29,6 +29,7 @@
     <!-- Footer (Optional) -->
     <footer class="text-center py-3 mt-5" style="color: #2C3E50;">
         &copy; {{ year }} Student Academic Performance | DataChronikles
+        <p>Made By Benjamine</p>
     </footer>
 
     <!-- Bootstrap Bundle JS -->
